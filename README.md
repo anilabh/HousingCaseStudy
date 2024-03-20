@@ -31,7 +31,45 @@ The data given in a csv contains information about sale of houses in Australia a
 ## Conclusions
 
 <!-- You don't have to answer all the questions - just the ones relevant to your project. -->
+Lasso with alpha 0.0001 shows the best R2 on Test Set. Optimal alpha for Ridge is 0.7
 
+Top predictor variables selected by Lasso regression:
+
+1stFlrSF 0.227597
+OverallQual 0.218375
+OverallCond 0.101245
+2ndFlrSF 0.094950
+GarageArea 0.089978
+LotArea 0.063677
+TotRmsAbvGrd 0.058231
+BsmtFullBath 0.049152
+FullBath 0.043161
+FireplaceQu 0.036543
+
+1st floor area is the most important variable in predicting the Sale Price. This is followed by overall quality and over all condition of the house. Overall area plays a key factor as is reflected by 2nd Floor, Garage and Lot areas being in the top 6 variables.
+
+We see an almost linear graph between predicted and observed target variable on test set.
+
+This means our model is able to predict the test data quite well
+
+Nominal variable analysis shows that high Sale Price is associated with:
+
+Cement Board or Stone for Exterior covering
+Builtin Garage
+SaleType of : Newly build and sold and Contract 15% Down payment regular terms
+Neighborhood type of Northridge and Northridge Heights
+Foundation with Poured Concrete
+Sale Condition Partial : Home was not completed when last assessed (associated with New Homes)
+
+...and low Sale Price is associated with:
+
+Commercial zones
+Asbestos Shingles exterior covering
+No garage
+Neighborhood type of Meadow Village
+Brick Common type of Exterior covering
+Foundation with Slabs
+Sale Condition with Adjoining Land Purchase
 
 ## Technologies Used
 - Python 3.11.1
